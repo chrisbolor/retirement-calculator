@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu:400,300italic,700,700italic);
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	color: #1E1E1E;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+	font-family: 'Ubuntu Condensed', sans-serif;
+
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 2em;
+}
+
+em, i {
+	font-weight: 300;
+	font-style: italic;
+}
+
+body {
+	background-color: grey;
+}
+
+#bg {
+
+}
+
+#main {
+
+	padding-top: 5%;
+	/*width: 90%;*/ /* width is now dynamically handled client-side to fit to resolution */
+	/*background-color: green;*/
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+header {
+	position: fixed;
+	margin-top: -5%;
+	background-color: #FFF;
+	z-index: 999;
+	outline: solid 2px;
+	margin-left: auto;
+	margin-right: auto;
+	/*height: 500px;*/
+
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 700;
+	font-style: italic;
+	display: block;
+}
+
+header h1 {
+	display: block;
+	/*min-width: 10em;
+	max-width: 50%;*/
+	background-color: teal;
+	float: left;
+}
+
+nav {
+	display: block;
+	min-width: 50%;
+	max-width: 70%;
+	background-color: silver;
+	float: right;
+	margin-top: 1.75%;
+
+}
+
+nav ul li a {
+	font-size: 1.5em;
+	margin-left: 7%;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background-color: blue;
+}
+
+nav ul li {
+	list-style-type: none;
+}
+
+#mainNav {
+	display: none;
+	position: absolute;
+	z-index: 999;
+	background-color: silver;
+	min-width: 50%;
+	max-width: 70%;
+}
+
+#mainNavContainer:hover #mainNav {
+	display: block;
+}
+
+
+
+.section {
+	transition: opacity .75s;
+	transition: color .75;
+	opacity: .7;
+	background-color: #AAA;
+	position: absolute;
+	display: inline-block;
+	-webkit-box-shadow: 0 25px 25px 5px rgba(0,0,0,.5);
+	   -moz-box-shadow: 0 25px 25px 5px rgba(0,0,0,.5);
+	        box-shadow: 0 25px 25px 5px rgba(0,0,0,.5);
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-bottom: 2em;*/
+	border-radius: 2em;
+	display: inline;
+}
+
+.section:focus, .section:active {
+	opacity: 1;
+}
+
+/*
+#sec1 {
+	background-color: gold;
+
+}
+
+#sec2 {
+	background-color: blue;
+}
+
+#sec3 {
+	background-color: orange;
+
+
+}
+
+#sec4 {
+	background-color: purple;
+
+}
+*/
+.section .container {
+	padding: 2em;
+}
+
+.section .container label {
+	float: left;
+	clear: left;
+	width: 50%;
+	margin-bottom: 1em;
+	font-size: 1.5em;
+}
+
+.section .container input {
+	float: right;
+	clear: right;
+	margin-bottom: 1em;
+	font-size: 1.2em;
+	color: grey;
+}
+
+#sec3 .container p {
+	float: right;
+	clear: right;
+	text-align: right;
+	margin-bottom: 1em;
+	width: 35%;
+	background-color: white;
+	font-size: 1.2em;
+
+}
+
+.section h3 {
+	text-transform: uppercase;
+	margin-bottom: 1em;
+	font-size: 3em;
+}
+
+#sec4 {
+	overflow: scroll;
+}
+
+
+
+#allSectionContainer {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: brown;
+	overflow: scroll;
+	position: fixed;
+}
+
+button {
+	margin-left: 73%;
+}
+
+.arrowButtonsContainer {
+	background-color: none;
+	/*position: fixed;*/
+	z-index: 999;
+	width: 20em;
+	left: 39%;
+	bottom: 15%;
+
+}
+
+.arrowButtonLeft, .arrowButtonRight {
+	background-color: blue;
+	opacity: .6;
+	width: 2em;
+	height: 2em;
+	font-size: 3em;
+	display: inline-block;
+	outline: none;
+	text-decoration: none;
+	box-shadow: 0px 3px 10px black;
+	transition: opacity .75s;
+}
+
+.arrowButtonLeft:hover, .arrowButtonRight:hover {
+	opacity: 1;
+}
+
+
+.arrowButtonLeft {
+	float: left;
+
+}
+
+.arrowButtonRight {
+	float: right;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+td {
+	width: 25%;
+	text-align: center;
+	padding: .7em;
+	background-color: silver;
+
+}
+
+thead td {
+	background-color: grey;
+}
+
+tr {
+	width: 100%;
+}
+
+#rbEnd {
+	visibility: hidden;
+}

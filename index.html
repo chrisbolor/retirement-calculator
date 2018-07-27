@@ -1,0 +1,327 @@
+<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<meta name="HTML-version" content="1.0">
+<meta name="JavaScript-version" content="1.0">
+<meta name="CSS-version" content="1.0">
+<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+
+
+
+<script src="script.js" type="text/javascript"></script>
+
+
+
+<title>Javascript Test 1: Retirement Calculator</title>
+</head>
+
+<body>
+
+
+<main id="bg">
+
+
+<section id="main">
+
+
+<header id="header">
+	<h1>retirement calculator</h1>
+	<nav id="mainNavContainer">
+    	<p id="mainNavIcon"><h3>main</h3>
+        	<ul id="mainNav">
+            	<li><a href="">HOW TO USE</a></li>
+            	<li><a href="">ABOUT</a></li>
+            	<li><a href="">RESOURCES</a></li>
+            	<li><a href="">DISCLAIMER</a></li>
+        	</ul>
+        </p>
+
+    </nav>
+</header><!-- ends main top of page header -->
+<section id="allSectionContainer">
+
+
+	<div id="sec1" class="section"><!-- current time -->
+    <div class="container">
+		<h3>Present Time</h3>
+
+        <label title="Current Age">Current Age: &nbsp;</label>
+        <input type="number" title="current age" value="" id="current age" /><br />
+
+        <label title="inflation rate">Inflation Rate: &nbsp;</label>
+        <input type="number" title="inflation rate" value="" id="inflation rate" /><br />
+
+        <label title="Years to Retirement">Years to Retirement: &nbsp;</label>
+        <input type="number" title="years to retirement" value="" id="years to retirement" /><br />
+
+        <label title="today's dollars">Target Yearly Income <em>(based on today's dollars)</em>: &nbsp;</label>
+        <input type="number" title="today's dollars" value="" id="today's dollars" /><br />
+
+        <!-- THE BELOW SECTION TO BE REPOSITIONED IN SEPARATE CALCULATION X
+        <label title="amount investing per year until retirement">Amount Investing Per Year Until Retirement: &nbsp;</label>
+        <input type="number" title="amount investing per year until retirement" value="" id="amount investing per year until retirement" /><br />
+
+        -->
+
+				<section class="arrowButtonsContainer">
+		        <button class="arrowButtonRight" id="sec1NextButton" onClick="arrowPress(i)">&#9658;</button>
+		    </section><!-- ends .arrowButtonsContainer -->
+
+
+    </div>
+	</div>
+	<div id="sec2" class="section"><!-- future time -->
+    <div class="container">
+		<h3>Future Time</h3>
+
+        <label title="Target Retirement Age" style="display:none;">Target Retirement Age: &nbsp;</label>
+        <input type="number" title="Target Retirement Age" value="" id="target retirement age" style="display:none;" /><br style="display: none;" />
+
+
+        <label title="Length of Retirement">Length of Retirement <em>(in years)</em>: &nbsp;</label>
+        <input type="number" title="length of retirement" value="" id="length of retirement" /><br />
+
+        <label title="Target Interest Rate to Nest Egg">Target Interest Rate to Nest Egg: &nbsp;</label>
+        <input type="number" title="Target Interest Rate to Nest Egg" value="" id="target interest rate to nest" /><br />
+
+        <label title="Target % for Yearly Income">Target % for Yearly Income: &nbsp;</label>
+        <input type="number" title="Target % for Yearly Income" value="" id="target retirement income percentage" /><br />
+
+
+        <br /><br /><br />
+        <button onClick="process()">PROCESS</button>
+
+				<section class="arrowButtonsContainer">
+		    	<button class="arrowButtonLeft" id="sec2PrevButton" onClick="arrowPress(i)">&#9668;</button>
+		        <button class="arrowButtonRight" id="sec2NextButton" onClick="arrowPress(i)">&#9658;</button>
+		    </section><!-- ends .arrowButtonsContainer -->
+
+    </div>
+	</div>
+
+	<div id="sec3" class="section"><!-- results part a -->
+    <div class="container">
+		<h3>Results - A</h3>
+
+        <label title="Target Nest Amount">Target Nest Amount: &nbsp;</label>
+        <p id="target nest amount"></p><br />
+
+        <label title="Target Yearly Income (in future dollars)">Target Yearly Income <em>(in future dollars)</em>: &nbsp;</label>
+        <p id="future dollars"></p><br />
+
+        <!--<label title="Amount in Present Time for Investment % Return Per Year">Amount in Present Time for Investment % Return Per Year: &nbsp;</label>
+        <p id="amount in present time for investment % return per year"></p><br />-->
+        <!-- THE ABOVE NEEDS TO BE REPOSITIONED IN SEPARATE CALCULATION X -->
+
+        <br /><br />
+
+				<section class="arrowButtonsContainer">
+		    	<button class="arrowButtonLeft" id="sec3PrevButton" onClick="arrowPress(i)">&#9668;</button>
+		        <button class="arrowButtonRight" id="Sec3NextButton" onClick="arrowPress(i)">&#9658;</button>
+		    </section><!-- ends .arrowButtonsContainer -->
+
+    </div>
+	</div>
+
+
+	<div id="sec4" class="section"><!-- results part b -->
+    <div class="container">
+		<h3>Results - B</h3>
+
+        <table>
+        	<tbody>
+            	<thead><tr>
+                	<td>Age</td>
+                    <td>Income</td>
+                    <td>Interest</td>
+                    <td>Balance</td>
+                </tr></thead>
+                <tr id="rb01"><!-- tabulated results go here -->
+                	<td class="rbAge" id="rbAge01">age</td>
+                    <td class="rbIncome" id="rbIncome01">income</td>
+                    <td class="rbInterest" id="rbInterest01">interest</td>
+                    <td class="rbBalance" id="rbBalance01">balance</td>
+                </tr>
+            </tbody>
+
+            <tbody id="rbStart">
+                <tr id="rbEnd"><!-- ends tabulated results -->
+                	<td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+				<section class="arrowButtonsContainer">
+		    	<button class="arrowButtonLeft" id="sec4PrevButton" onClick="arrowPress(i)">&#9668;</button>
+		        <button class="arrowButtonRight" id=sec4NextButton onClick="arrowPress(i)">&#9658;</button>
+		    </section><!-- ends .arrowButtonsContainer -->
+
+    </div>
+	</div>
+ </section><!-- closes #allSectionContainer -->
+
+
+</section><!-- closes #main -->
+
+</main><!-- closes #bg -->
+
+
+<script type="text/javascript">
+
+
+
+// THIS WILL ALLOW FOR THE HEIGHT TO CONSTANTLY BE ADJUSTED //
+
+
+	//SET GLOBAL VARIABLES
+	var fluidHeight = Number((100*(screen.availHeight))/screen.height);
+	var screenWidth = Number(screen.width);
+	var bg = document.getElementById("bg");
+	var main = document.getElementById("main");
+	var allSectionContainer = document.getElementById("allSectionContainer");
+	var header = document.getElementById("header");
+	var sections = document.getElementsByClassName("section");
+	var globalWidth = "70%";
+	var globalHeight = window.innerHeight + "px";
+	var aspectRatio;
+	var screenOrientation;
+	// var orientation is reserved for android orientation of screen 0/180 = portait; 90/-90 = landscape; only works on android; on desktop; script crashes
+
+
+
+
+
+
+
+
+
+
+
+	//
+
+	bg.style.height = globalHeight;
+	bg.style.width = Number(screen.width) + "px";
+
+	//main.style.height = window.innerHeight;
+	//main.style.minHeight = fluidHeight*(90/100)*screen.height + "px";
+	//main.style.maxHeight = window.innerHeight;
+	main.style.width = screenWidth + "px";
+	main.style.minWidth = screenWidth*(90/100) + "px";
+
+	header.style.width = globalWidth;
+
+	function adjustHeader(){
+		var x = Number(window.getComputedStyle(header).getPropertyValue("width").replace("px", ""));
+		var halfX = (x/2);
+		header.style.left = (screenWidth/2) - halfX + "px";
+	}
+	adjustHeader();
+
+	allSectionContainer.style.width = "100%";
+	allSectionContainer.style.height = Number(window.innerHeight)*(91/100) + "px";
+
+	function adjustSections(){
+
+		// ADJUST ALL SECTIONS WIDTHS & FAN OUT
+		for(i=0; i<sections.length; i++){
+			sections[i].style.width = globalWidth;
+			sections[i].style.height = Number(window.innerHeight)*(85/100) + "px";
+			sections[i].style.marginLeft = Number(globalWidth.replace("%", "")*i)+(i*5) +"%";
+
+		}
+	}
+	adjustSections();
+
+
+
+
+	/*
+	function myMove() {
+    	//var elem = document.getElementById("animate");
+    	var pos = 0;
+    	var id = setInterval(frame, .15);
+    	function frame() {
+        	if (pos == 350) {
+            	clearInterval(id);
+        	} else {
+            	pos++;
+            	sections[i].style. = pos + 'px';
+        	}
+    	}
+	}
+	myMove();
+
+
+	*/
+
+	//alert(window.getComputedStyle(sections[0]).getPropertyValue("height"));
+	//alert(window.innerHeight);
+
+
+	//alert(window.getComputedStyle(allSectionContainer).getPropertyValue("width"));
+	//alert(window.getComputedStyle(main).getPropertyValue("width"));
+
+	// SET ASPECT RATION & ORIENTATION //
+
+	function setARSO(){
+			// SET LANDSCAPE ASPECT RATIOS/ORENTATIONS
+			if(Number(screen.width/screen.height).toFixed(2) == Number(16/10).toFixed(2)){
+				aspectRatio = "16:10";
+				screenOrientation = "landscape";
+			}
+			if(Number(screen.width/screen.height).toFixed(2) == Number(16/9).toFixed(2)){
+				aspectRatio = "16:9";
+				screenOrientation = "landscape";
+			}
+			if(Number(screen.width/screen.height) == Number(5/3)){
+				aspectRatio = "5:3";
+				screenOrientation = "landscape";
+			}
+			if(Number(screen.width/screen.height) == Number(4/3)){
+				aspectRatio = "4:3";
+				screenOrientation = "landscape";
+			}
+
+			// SET PORTRAIT ASPECT RATIOS/ORIENTATIONS
+
+			if(Number(screen.width/screen.height).toFixed(2) == Number(10/16).toFixed(2)){
+				aspectRatio = "10:16";
+				screenOrientation = "portait";
+			}
+			if(Number(screen.width/screen.height).toFixed(2) == Number(9/16).toFixed(2)){
+				aspectRatio = "9:16";
+				screenOrientation = "portrait";
+			}
+			if(Number(screen.width/screen.height) == Number(3/5)){
+				aspectRatio = "3:5";
+				screenOrientation = "portrait";
+			}
+			if(Number(screen.width/screen.height) == Number(3/4)){
+				aspectRatio = "3:4";
+				screenOrientation = "portrait";
+			}
+
+			//alert(screen.width + " " + screen.height);
+			alert(aspectRatio + " " + screenOrientation);
+	}
+
+	window.addEventListener("resize", setARSO);
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

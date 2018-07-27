@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+	margin: 0;	
+}
+
+#bg {
+	background-color: grey;	
+}
+
+#main {
+
+	padding-top: 75px;
+	width: 90%;
+	background-color: blue;	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section {
+	width: 48%;
+	/*display: block;*/
+}
+
+#sec1 {
+	background-color: gold;
+	margin-left: 0;
+	/*margin-right: 3.5%;*/
+	clear: left;
+	float: left;
+}
+
+#sec2 {
+	background-color: green;
+	/*margin-left: auto;*/
+	float: right;
+	clear: right;
+}
+
+#sec3 {
+	background-color: orange;
+	/*margin-right: 0;
+	margin-left: 3.5%;*/
+	width: 100%;
+	clear: both;
+
+}
+
+#sec4 {
+	background-color: purple;
+	width: 100%;
+}
+
+.section .container {
+	padding: 10px;	
+}
+
+.section .container label {
+	float: left;
+	clear: left;
+	width: 50%;
+	margin-bottom: 10px;
+
+}
+
+.section .container input {
+	float: right;
+	clear: right;
+	margin-bottom: 10px;
+}
+
+#sec3 .container p {
+	float: right;
+	clear: right;
+	text-align: right;
+	margin-bottom: 10px;
+	width: 35%;
+	background-color: white;
+
+}
+
+.section h3 {
+	text-transform: uppercase;
+	margin-bottom: 7px;
+}
+
+button {
+	margin-left: 73%;	
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;	
+	width: 100%;
+}
+
+td {
+	width: 25%;
+	text-align: center;
+	padding: 7px;
+	background-color: silver;
+	
+}
+
+thead td {
+	background-color: grey;	
+}
+
+tr {
+	width: 100%;	
+}
+
+
